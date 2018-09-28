@@ -1,0 +1,24 @@
+//Cutomized registration handler class to get the data from third party
+
+global class RegHandler implements Auth.RegistrationHandler{
+    
+global User createUser(Id portalId, Auth.UserData data){
+        
+	String firstname;
+    String lastname;
+    String email;
+    firstname= data.firstname;
+    lastname=data.lastname;
+    email=data.email;    
+    WebServiceCallout.sendNotification(firstname, lastname, email );    
+    System.debug('In registartion handler');  	
+    return null;   
+    
+  
+}
+
+global void updateUser(Id userId, Id portalId, Auth.UserData data){
+	
+}
+
+    }
