@@ -1,7 +1,7 @@
 //Cutomized registration handler class to get the data from third party
 
 global class RegHandler implements Auth.RegistrationHandler{
-    
+ /*adding new comment*/   
 global User createUser(Id portalId, Auth.UserData data){
         
 	String firstname;
